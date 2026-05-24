@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cranevis - Ultimate Mobile Crane & Lifting Companion App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for modern, crisp icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(241, 196, 15, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(241, 196, 15, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 bg-grid-pattern overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-500 text-slate-950 p-2 rounded-xl font-black text-xl flex items-center justify-center shadow-lg shadow-amber-500/20">
+                    <i data-lucide="hook" class="w-6 h-6 transform -rotate-45"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+                    CRANE<span class="text-amber-500">VIS</span>
+                </span>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#features" class="hover:text-amber-500 transition-colors">Features</a>
+                <a href="#interactive-tool" class="hover:text-amber-500 transition-colors">Live Demo</a>
+                <a href="#why-us" class="hover:text-amber-500 transition-colors">Why Cranevis</a>
+            </nav>
+
+            <!-- CTA Download -->
+            <div>
+                <a href="#download" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-2.5 rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/15 flex items-center space-x-2 text-sm">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Get App</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-between gap-12">
+        <!-- Hero Text -->
+        <div class="flex-1 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 text-amber-500 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                </span>
+                <span>Next-Gen Crane Companion App</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white">
+                Lift Smarter, <br>
+                <span class="bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 bg-clip-text text-transparent">Simulate Safer.</span>
+            </h1>
+            
+            <p class="text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                Empower your Android smartphone with heavy-lifting mathematics. Plan setups, check rigging capacities, measure angles, and simulate crane configurations in seconds.
+            </p>
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                <!-- Badges -->
+                <a href="#download" class="flex items-center space-x-3 bg-slate-900 hover:bg-slate-800 border border-slate-700/80 px-6 py-3 rounded-2xl transition-all duration-200">
+                    <i data-lucide="play" class="w-8 h-8 text-amber-500 fill-amber-500"></i>
+                    <div class="text-left">
+                        <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Get it on</p>
+                        <p class="text-base font-bold text-white leading-tight">Google Play</p>
+                    </div>
+                </a>
+                
+                <a href="#interactive-tool" class="flex items-center space-x-2 text-slate-300 hover:text-white px-6 py-3 rounded-2xl border border-transparent hover:border-slate-800 transition-all">
+                    <span>Try Web Simulator</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Stats/Highlights -->
+            <div class="grid grid-cols-3 gap-6 pt-8 max-w-md mx-auto lg:mx-0 border-t border-slate-900">
+                <div>
+                    <p class="text-3xl font-extrabold text-white">7+</p>
+                    <p class="text-xs text-slate-500 uppercase mt-1">Core Modules</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">100%</p>
+                    <p class="text-xs text-slate-500 uppercase mt-1">Field Tested</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">0%</p>
+                    <p class="text-xs text-slate-500 uppercase mt-1">Math Guesswork</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Graphic (Interactive Simulated Phone Mockup) -->
+        <div class="flex-1 w-full max-w-md lg:max-w-none flex justify-center">
+            <div class="relative w-full max-w-sm">
+                <!-- Outer Glow -->
+                <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-[48px] blur-2xl opacity-20 animate-pulse"></div>
+                
+                <!-- Phone Frame -->
+                <div class="relative bg-slate-950 border-[6px] border-slate-800 rounded-[48px] shadow-2xl overflow-hidden aspect-[9/18] flex flex-col">
+                    <!-- Notch/Speaker -->
+                    <div class="absolute top-0 inset-x-0 h-6 flex justify-center items-start z-20">
+                        <div class="bg-slate-800 w-24 h-4 rounded-b-xl"></div>
+                    </div>
+
+                    <!-- Screen Content -->
+                    <div class="flex-1 flex flex-col p-4 pt-8 bg-slate-900 justify-between">
+                        <!-- Top App Bar -->
+                        <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                            <span class="text-xs font-bold text-slate-400">CRANEVIS SIMULATOR v1.4</span>
+                            <span class="text-xs text-emerald-500 flex items-center gap-1">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Safe Lift
+                            </span>
+                        </div>
+
+                        <!-- Crane Simulation Space (SVG Dynamic) -->
+                        <div class="flex-1 bg-slate-950 rounded-xl my-4 p-2 relative overflow-hidden flex flex-col justify-between">
+                            <!-- Background Grid -->
+                            <div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
+                            
+                            <!-- Simple Indicator HUD -->
+                            <div class="relative z-10 flex justify-between text-[10px] text-slate-400 font-mono">
+                                <div>Radius: <span class="text-amber-500" id="hero-radius">12m</span></div>
+                                <div>Capacity: <span class="text-emerald-400" id="hero-cap">84.2%</span></div>
+                            </div>
+
+                            <!-- Crane SVG Body -->
+                            <div class="relative z-10 flex-1 flex items-end justify-center">
+                                <svg id="crane-svg" class="w-full h-48" viewBox="0 0 200 160">
+                                    <!-- Building Mockup -->
+                                    <rect id="hero-building" x="120" y="80" width="60" height="80" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+                                    <!-- Soil Pad -->
+                                    <rect x="10" y="145" width="180" height="15" fill="#451a03" />
+                                    <!-- Outrigger pads -->
+                                    <rect x="35" y="140" width="16" height="5" fill="#f59e0b" />
+                                    <rect x="75" y="140" width="16" height="5" fill="#f59e0b" />
+                                    <!-- Crane Base/Tracks -->
+                                    <rect x="40" y="130" width="45" height="10" rx="3" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+                                    <!-- Cabin -->
+                                    <rect x="50" y="115" width="22" height="16" rx="2" fill="#334155" />
+                                    <!-- Boom Anchor Point -->
+                                    <circle cx="68" cy="118" r="4" fill="#f59e0b" />
+                                    <!-- Dynamic Boom (Pivot at 68, 118) -->
+                                    <g id="crane-boom" transform="rotate(-40, 68, 118)">
+                                        <!-- Main Telescopic Boom -->
+                                        <line x1="68" y1="118" x2="160" y2="118" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" />
+                                        <line x1="120" y1="118" x2="200" y2="118" stroke="#d97706" stroke-width="5" stroke-linecap="round" />
+                                        <!-- Jib Line or Rigging point at (200, 118) transformed -->
+                                        <circle cx="200" cy="118" r="3" fill="#1e293b" />
+                                    </g>
+                                    <!-- Rigging Cable (Dynamic recalculation using JS) -->
+                                    <line id="rigging-cable" x1="169" y1="33" x2="169" y2="85" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2" />
+                                    <!-- Load -->
+                                    <rect id="hero-load" x="159" y="85" width="20" height="20" rx="2" fill="#ef4444" />
+                                </svg>
+                            </div>
+
+                            <!-- Screen Control Inside App Mockup -->
+                            <div class="relative z-10 bg-slate-900/90 border border-slate-800 p-2.5 rounded-lg space-y-1">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-slate-400 font-medium">Boom Extension</span>
+                                    <span class="font-bold text-white text-xs" id="boom-length-display">30 meters</span>
+                                </div>
+                                <input id="hero-boom-slider" type="range" min="30" max="65" value="40" class="w-full h-1 bg-slate-800 accent-amber-500 rounded-lg appearance-none cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- App Bottom Navigation Dummy -->
+                        <div class="flex justify-between items-center px-4 py-1.5 bg-slate-950 rounded-lg border border-slate-800 text-slate-500 text-xs">
+                            <span class="text-amber-500 flex flex-col items-center"><i data-lucide="layout-grid" class="w-4 h-4"></i></span>
+                            <span class="flex flex-col items-center"><i data-lucide="camera" class="w-4 h-4"></i></span>
+                            <span class="flex flex-col items-center"><i data-lucide="calculator" class="w-4 h-4"></i></span>
+                            <span class="flex flex-col items-center"><i data-lucide="file-text" class="w-4 h-4"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE 7 CORE FEATURES -->
+    <section id="features" class="py-24 bg-slate-900/40 border-y border-slate-900/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-500">Comprehensive Utility Suit</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"> Engineered for Modern Lift Professionals</p>
+                <p class="text-slate-400 font-light">Cranevis packs seven robust modules into one seamless interface, replacing heavy books and complex spreadsheets right in the field.</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Data Center -->
+                <div class="bg-slate-950 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 group">
+                    <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1. Data Center</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Central storage for your lifting configurations. Safely record, edit, and instantly recall specific crane capacities, building measurements, and load matrices.
+                    </p>
+                </div>
+
+                <!-- 2. Sling Table -->
+                <div class="bg-slate-950 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 group">
+                    <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="table" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2. Sling Table</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        A dynamic rating encyclopedia covering wire rope slings, synthetic webbing, and chain configurations. Supports multi-grade selections with a seamless imperial-metric toggle.
+                    </p>
+                </div>
+
+                <!-- 3. Angle Camera -->
+                <div class="bg-slate-950 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 group">
+                    <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="camera" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3. Angle Camera</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Use your phone’s camera system to lock in sling orientation angles. Snap a quick layout photo and overlay measuring protractors to assure dynamic hoisting tolerances.
+                    </p>
+                </div>
+
+                <!-- 4. Sling Tension Calculator -->
+                <div class="bg-slate-950 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 group">
+                    <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">4. Sling Tension</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Enter load specs and apex geometries to compute individual line stress. Instantly verify if the sling tension stays safely inside operational limits.
+                    </p>
+                </div>
+
+                <!-- 5. Advanced Simulation -->
+                <div class="bg-slate-950 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 group">
+                    <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">5. Simulation Workspace</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Configure telescopic or lattice boom models. Adjust surrounding structural boundaries and dimensions dynamically, scaling loads on-the-fly to test clearances.
+                    </p>
+                </div>
+
+                <!-- 6. Ground Bearing Pressure -->
+                <div class="bg-slate-950 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 group">
+                    <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">6. Ground Bearing Pressure</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Analyze ground outrigger forces in real time. Input Ground Bearing Capacity (GBC) guidelines to compute the necessary support pad areas, ensuring total structural safety.
+                    </p>
+                </div>
+
+                <!-- 7. Lifting Plan (Single-Column Banner Span on LG screens) -->
+                <div class="bg-gradient-to-r from-slate-950 to-slate-900 border border-slate-800/80 p-8 rounded-3xl hover:border-amber-500/30 transition-all duration-300 lg:col-span-3 group flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="flex-1 space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-amber-500/10 text-amber-500 w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">7. Professional Lifting Plan Builder</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed font-light max-w-3xl">
+                            Compile all your simulation telemetry, sling designs, and soil pressures into an instantly generated, print-ready, professional PDF Lifting Plan. Ready to share with your safety officers or print on-site.
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <span class="inline-flex bg-slate-900 border border-slate-800 text-amber-400 text-xs px-4 py-2 rounded-xl font-mono uppercase font-semibold">
+                            PDF Export Available
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE CALCULATOR SUITE -->
+    <section id="interactive-tool" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-900/60 rounded-[40px] border border-slate-800/80 overflow-hidden">
+            <div class="p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+                
+                <!-- Tool Details -->
+                <div class="flex-1 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-500">Live Browser Preview</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Test-drive Cranevis Algorithms</h2>
+                    <p class="text-slate-400 font-light leading-relaxed">
+                        Why wait? Test out the mathematical foundation of Cranevis. Switch between the interactive modules below to calculate actual rig configurations.
+                    </p>
+
+                    <!-- Tab Buttons -->
+                    <div class="flex space-x-2 bg-slate-950 p-1.5 rounded-2xl border border-slate-800">
+                        <button id="tab-tension" class="flex-1 py-3 px-4 rounded-xl text-xs font-bold transition-all text-slate-950 bg-amber-500 flex items-center justify-center gap-2">
+                            <i data-lucide="activity" class="w-4 h-4"></i>
+                            Sling Tension
+                        </button>
+                        <button id="tab-ground" class="flex-1 py-3 px-4 rounded-xl text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center justify-center gap-2">
+                            <i data-lucide="layers" class="w-4 h-4"></i>
+                            Soil Pressure
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-sm text-slate-500 pt-4">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
+                        <span>Matches exact ASME B30 hoisting algorithms.</span>
+                    </div>
+                </div>
+
+                <!-- Live Interface Widget Card -->
+                <div class="flex-1 w-full max-w-lg bg-slate-950 p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl relative">
+                    <!-- Glow -->
+                    <div class="absolute inset-0 bg-amber-500/5 rounded-3xl filter blur-xl"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- WIDGET 1: SLING TENSION -->
+                        <div id="widget-tension-container" class="space-y-6">
+                            <div class="border-b border-slate-800 pb-4">
+                                <h4 class="text-lg font-bold text-white">Sling Tension Calculator</h4>
+                                <p class="text-slate-500 text-xs">Assumes equal-length 2-leg sling configuration.</p>
+                            </div>
+
+                            <!-- Input Fields -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Total Load Weight (kg)</label>
+                                    <div class="relative">
+                                        <input id="tension-weight" type="number" value="10000" class="w-full bg-slate-900 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-white font-mono text-sm focus:outline-none">
+                                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs">kg</span>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Sling Angle (&deg;)</label>
+                                        <div class="relative">
+                                            <input id="tension-angle" type="number" value="60" min="15" max="90" class="w-full bg-slate-900 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-white font-mono text-sm focus:outline-none">
+                                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs">&deg;</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Number of Legs</label>
+                                        <select id="tension-legs" class="w-full bg-slate-900 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-white text-sm focus:outline-none">
+                                            <option value="2">2 Legs</option>
+                                            <option value="4">4 Legs</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Result Widget Output -->
+                            <div class="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-5 space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-400 font-medium">Stress per Sling</span>
+                                    <span class="text-xs text-slate-500">Angle Factor: <span id="tension-factor" class="font-mono text-amber-500">1.155</span></span>
+                                </div>
+                                <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">
+                                    <span id="tension-result">5,773</span> <span class="text-base font-bold text-slate-300">kg / leg</span>
+                                </div>
+                                <div class="text-[10px] text-slate-500 italic">
+                                    Warning: Never pick loads where sling capacity falls under calculation outputs.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WIDGET 2: GROUND BEARING PRESSURE (HIDDEN BY DEFAULT) -->
+                        <div id="widget-ground-container" class="space-y-6 hidden">
+                            <div class="border-b border-slate-800 pb-4">
+                                <h4 class="text-lg font-bold text-white">Ground Bearing Pressure & Pad Size</h4>
+                                <p class="text-slate-500 text-xs">Estimate mandatory pad square foot area safely.</p>
+                            </div>
+
+                            <!-- Input Fields -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Max Outrigger Force (kN)</label>
+                                    <div class="relative">
+                                        <input id="ground-force" type="number" value="350" class="w-full bg-slate-900 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-white font-mono text-sm focus:outline-none">
+                                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs">kN</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Ground Bearing Capacity (kN/m&sup2;)</label>
+                                    <div class="relative">
+                                        <input id="ground-gbc" type="number" value="200" class="w-full bg-slate-900 border border-slate-800 focus:border-amber-500 rounded-xl px-4 py-3 text-white font-mono text-sm focus:outline-none">
+                                        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs">kN/m&sup2;</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Result Widget Output -->
+                            <div class="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-5 space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-400 font-medium">Minimum Pad Area Required</span>
+                                    <span class="text-xs text-emerald-400">Safe Target</span>
+                                </div>
+                                <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">
+                                    <span id="ground-area-result">1.75</span> <span class="text-base font-bold text-slate-300">m&sup2;</span>
+                                </div>
+                                <div class="text-xs text-slate-300">
+                                    Recommended Minimum Square Size: <br>
+                                    <span class="font-bold text-white font-mono text-sm"><span id="ground-size-result">1.32</span> m x <span id="ground-size-result2">1.32</span> m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CRANEVIS SECTION -->
+    <section id="why-us" class="py-24 relative overflow-hidden bg-slate-950">
+        <!-- Background light sphere -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-500">Uncompromised Precision</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Heavy Lifting, Calculated Right</h2>
+                <p class="text-slate-400 font-light">Whether you are an on-site supervisor, safety officer, or heavy machinery operator, Cranevis offers critical security checks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <!-- Point 1 -->
+                <div class="bg-slate-900/30 border border-slate-900 p-8 rounded-3xl space-y-4">
+                    <div class="mx-auto w-12 h-12 bg-amber-500/10 text-amber-500 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Risk Mitigation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Overcome estimation hazards. Instantly double-check mechanical, wire, and soil pressure specs before making any hoist action.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="bg-slate-900/30 border border-slate-900 p-8 rounded-3xl space-y-4">
+                    <div class="mx-auto w-12 h-12 bg-amber-500/10 text-amber-500 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="pocket" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Ultra Portable</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Leave bulky manuals, lookup binders, and notebooks behind. Have complete crane charts and safety modules sitting right in your pocket.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="bg-slate-900/30 border border-slate-900 p-8 rounded-3xl space-y-4">
+                    <div class="mx-auto w-12 h-12 bg-amber-500/10 text-amber-500 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="check-circle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Regulatory Assist</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed font-light">
+                        Build and draft detailed Lifting Plan outlines containing all critical soil, engineering, and rigging data. Accelerate site manager approvals.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD / APP PROMOTION CALL-TO-ACTION (CTA) -->
+    <section id="download" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-600 text-slate-950 rounded-[40px] overflow-hidden shadow-2xl p-8 sm:p-12 lg:p-16 text-center">
+            
+            <!-- Diagonal stripes styling element -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            
+            <div class="max-w-3xl mx-auto space-y-8 relative z-10">
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-950">
+                    Ready for Error-Free Lifting Operations?
+                </h2>
+                
+                <p class="text-slate-900/80 font-medium text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                    Download Cranevis now on your Android smartphone and join hundreds of certified riggers, operators, and civil safety engineers raising safety bars worldwide.
+                </p>
+
+                <!-- Dynamic Mock Download Platform Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="handleDownload()" class="bg-slate-950 hover:bg-slate-900 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition-all duration-200 hover:-translate-y-1 flex items-center justify-center space-x-3">
+                        <i data-lucide="play" class="w-6 h-6 fill-amber-500 text-amber-500"></i>
+                        <div class="text-left">
+                            <p class="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">Instant Download</p>
+                            <p class="text-base font-bold">Google Play Store</p>
+                        </div>
+                    </button>
+                    
+                    <button onclick="handleDownload()" class="bg-transparent border-2 border-slate-950 text-slate-950 hover:bg-slate-950/10 font-bold px-8 py-4 rounded-2xl transition-all duration-200 flex items-center justify-center space-x-2">
+                        <i data-lucide="file-down" class="w-5 h-5"></i>
+                        <span>Download Direct APK</span>
+                    </button>
+                </div>
+
+                <!-- Custom Notification Banner Container -->
+                <div id="download-notification" class="hidden max-w-md mx-auto bg-slate-950 text-white p-3.5 rounded-xl text-xs font-semibold animate-bounce mt-4 shadow-xl border border-slate-800">
+                    🎉 Thank you for downloading! Check your device alerts.
+                </div>
+
+                <p class="text-xs text-slate-900/60 font-medium pt-4">
+                    Compatible with Android version 8.0 Oreo and above. No constant internet required.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <!-- Left: Logo & Legal -->
+            <div class="space-y-2 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <div class="bg-amber-500 text-slate-950 p-1.5 rounded-lg font-black text-sm flex items-center justify-center">
+                        <i data-lucide="hook" class="w-4 h-4 transform -rotate-45"></i>
+                    </div>
+                    <span class="text-lg font-extrabold tracking-wider text-white">
+                        CRANE<span class="text-amber-500">VIS</span>
+                    </span>
+                </div>
+                <p class="text-xs text-slate-500">&copy; 2026 Cranevis Mobile Solutions. All rights reserved.</p>
+            </div>
+
+            <!-- Right: Disclaimer -->
+            <div class="max-w-md text-center md:text-right">
+                <p class="text-[10px] text-slate-600 leading-relaxed">
+                    Disclaimer: Cranevis is a professional utility and validation assistance application. Calculations provided by Cranevis must always be corroborated with physical crane specifications and direct lifting operations regulatory guidelines on-site.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Download Action Simulation
+        function handleDownload() {
+            const notification = document.getElementById('download-notification');
+            notification.classList.remove('hidden');
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 5000);
+        }
+
+        // --- HERO DEVICE CRANE SIMULATION LOGIC ---
+        const heroBoomSlider = document.getElementById('hero-boom-slider');
+        const craneBoom = document.getElementById('crane-boom');
+        const riggingCable = document.getElementById('rigging-cable');
+        const heroLoad = document.getElementById('hero-load');
+        const heroRadiusDisplay = document.getElementById('hero-radius');
+        const heroCapDisplay = document.getElementById('hero-cap');
+        const boomLengthDisplay = document.getElementById('boom-length-display');
+
+        function updateHeroSimulation() {
+            const val = parseInt(heroBoomSlider.value);
+            // Translate range (30-65) to angle (-25 to -60 degrees rotation)
+            const baseAngle = -25;
+            const step = (val - 30) / 35; // 0 to 1
+            const angle = baseAngle - (step * 35); // ranges from -25 to -60
+            
+            // Apply rotation to boom
+            craneBoom.setAttribute('transform', `rotate(${angle}, 68, 118)`);
+            
+            // Calculate end point of dynamic boom
+            // Pivot at (68, 118). Total length of boom representation in SVG is ~132px.
+            const angleRad = (angle * Math.PI) / 180;
+            const boomEndX = 68 + Math.cos(angleRad) * 132;
+            const boomEndY = 118 + Math.sin(angleRad) * 132;
+
+            // Set cable path
+            riggingCable.setAttribute('x1', boomEndX);
+            riggingCable.setAttribute('y1', boomEndY);
+            riggingCable.setAttribute('x2', boomEndX);
+            // Floor of mobile screen is roughly y=145 (pad height). Let load hang nicely.
+            const loadY = 115; 
+            riggingCable.setAttribute('y2', loadY);
+
+            // Set load box path
+            heroLoad.setAttribute('x', boomEndX - 10);
+            heroLoad.setAttribute('y', loadY);
+
+            // Update text displays
+            boomLengthDisplay.textContent = `${val} meters`;
+            
+            // Calculate a dummy mock radius
+            const mockRadius = (val * 0.35).toFixed(1);
+            heroRadiusDisplay.textContent = `${mockRadius}m`;
+
+            // Calculate capacity load percentage (higher boom angle = safer, lower boom angle = higher capacity stress)
+            const mockCap = Math.max(15, Math.min(99, 105 - (val * 1.3))).toFixed(1);
+            heroCapDisplay.textContent = `${mockCap}%`;
+            
+            if (parseFloat(mockCap) > 85) {
+                heroCapDisplay.className = "text-rose-500 font-bold";
+            } else if (parseFloat(mockCap) > 60) {
+                heroCapDisplay.className = "text-amber-500 font-bold";
+            } else {
+                heroCapDisplay.className = "text-emerald-400 font-bold";
+            }
+        }
+
+        heroBoomSlider.addEventListener('input', updateHeroSimulation);
+        // Run initial configuration update on load
+        window.addEventListener('load', updateHeroSimulation);
+
+
+        // --- LIVE DEMO CALCULATORS WIDGET LOGIC ---
+        const tabTension = document.getElementById('tab-tension');
+        const tabGround = document.getElementById('tab-ground');
+        const widgetTension = document.getElementById('widget-tension-container');
+        const widgetGround = document.getElementById('widget-ground-container');
+
+        // Tab Switching Actions
+        tabTension.addEventListener('click', () => {
+            // Button Styles
+            tabTension.className = "flex-1 py-3 px-4 rounded-xl text-xs font-bold transition-all text-slate-950 bg-amber-500 flex items-center justify-center gap-2";
+            tabGround.className = "flex-1 py-3 px-4 rounded-xl text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center justify-center gap-2";
+            
+            // Content Toggle
+            widgetTension.classList.remove('hidden');
+            widgetGround.classList.add('hidden');
+        });
+
+        tabGround.addEventListener('click', () => {
+            // Button Styles
+            tabGround.className = "flex-1 py-3 px-4 rounded-xl text-xs font-bold transition-all text-slate-950 bg-amber-500 flex items-center justify-center gap-2";
+            tabTension.className = "flex-1 py-3 px-4 rounded-xl text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center justify-center gap-2";
+            
+            // Content Toggle
+            widgetGround.classList.remove('hidden');
+            widgetTension.classList.add('hidden');
+        });
+
+        // WIDGET 1: SLING TENSION LOGIC
+        const tensionWeight = document.getElementById('tension-weight');
+        const tensionAngle = document.getElementById('tension-angle');
+        const tensionLegs = document.getElementById('tension-legs');
+        const tensionResult = document.getElementById('tension-result');
+        const tensionFactor = document.getElementById('tension-factor');
+
+        function calculateSlingTension() {
+            const w = parseFloat(tensionWeight.value) || 0;
+            let ang = parseFloat(tensionAngle.value) || 0;
+            const legs = parseInt(tensionLegs.value) || 2;
+
+            // Cap angle limits
+            if (ang < 1) ang = 1;
+            if (ang > 90) ang = 90;
+
+            const angleRad = (ang * Math.PI) / 180;
+            const sineVal = Math.sin(angleRad);
+            
+            // Angle Factor = 1 / sin(angle)
+            const factor = (1 / sineVal);
+            tensionFactor.textContent = factor.toFixed(3);
+
+            // Tension = (Weight / Legs) * Factor
+            const tension = (w / legs) * factor;
+
+            // Update UI with formatted values
+            tensionResult.textContent = Math.round(tension).toLocaleString('en-US');
+        }
+
+        tensionWeight.addEventListener('input', calculateSlingTension);
+        tensionAngle.addEventListener('input', calculateSlingTension);
+        tensionLegs.addEventListener('change', calculateSlingTension);
+
+
+        // WIDGET 2: GROUND BEARING PRESSURE LOGIC
+        const groundForce = document.getElementById('ground-force');
+        const groundGbc = document.getElementById('ground-gbc');
+        const groundAreaResult = document.getElementById('ground-area-result');
+        const groundSizeResult = document.getElementById('ground-size-result');
+        const groundSizeResult2 = document.getElementById('ground-size-result2');
+
+        function calculateGroundPressure() {
+            const f = parseFloat(groundForce.value) || 0;
+            const gbc = parseFloat(groundGbc.value) || 1; // avoid division by zero
+
+            // Area = Force (kN) / Soil Capacity (kN/m2)
+            const area = f / gbc;
+            // Pad length side
+            const side = Math.sqrt(area);
+
+            groundAreaResult.textContent = area.toFixed(2);
+            groundSizeResult.textContent = side.toFixed(2);
+            groundSizeResult2.textContent = side.toFixed(2);
+        }
+
+        groundForce.addEventListener('input', calculateGroundPressure);
+        groundGbc.addEventListener('input', calculateGroundPressure);
+
+        // Run initial calculations on startup
+        calculateSlingTension();
+        calculateGroundPressure();
+    </script>
+</body>
+</html>
